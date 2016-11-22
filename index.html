@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="autor" content="Vusumzi Belmont">
+    <meta name="language" content="Spanish">
+    <title>XML</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--loacal styles and scripts-->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/stack.js"></script>
+    <script type="text/javascript" src="js/CanvasHead.js"></script>
+    <script id="main-script" type="text/javascript" src="js/main.js"></script>
+    <!--local ace edotor-->
+    <script src="js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body onload="stack()">
+    <header>
+      <div class="button-cont">
+        <button type="button" name="undo" id="undo" class="button-dark">Undo</button>
+        <button type="button" name="redo" id="redo" class="button-dark-2">Redo</button>
+      </div>
+      <div class="logo">
+        <h2>XML View</h2>
+      </div>
+    </header>
+
+    <div class="view">
+
+
+
+      <!-- editor -->
+      <div class="editor-cont">
+        <div id="editor">
+          <pre>
+            &lt;ellipse
+            x="300"
+            y="300"
+            width="200"
+            height="200"
+            background-color="'red'"/&gt;
+          </pre>
+        </div>
+        <script type="text/javascript" src="js/editorConfig.js"></script>
+        <div class="bottom-bar">
+          <button type="button" name="run" class="button-accent">run</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

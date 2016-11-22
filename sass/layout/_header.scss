@@ -1,0 +1,30 @@
+header {
+  background-color: $primary-color;
+  color: $text-color;
+  height: 70px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  @include box-shadow(0, 4px, 22px, -3px, rgba(0,0,0,0.75));
+  .logo {
+    border-left: 1px solid #fff;
+    display: block;
+    margin-left: auto;
+    padding: 0 32px;
+    height: inherit;
+    vertical-align: middle;
+  }
+  .button-cont {
+    padding: 0 32px;
+    vertical-align: middle;
+    .button-dark {
+      @extend %button-dark;
+      margin-right: 10px;
+    }
+
+    .button-dark-2 {
+      @extend %button-dark-2;
+    }
+  }
+}

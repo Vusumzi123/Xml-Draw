@@ -1,0 +1,44 @@
+
+body{
+  min-width: 900px;
+  .view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    max-width: $content-width ;
+    height: 85vh;
+    margin: 20px auto;
+    border: 2px solid $divider-color;
+    @include border-radius(9px);
+    .editor-cont{
+      width: $content-width/2;
+      #editor {
+        width: $content-width/2;
+        @include border-radius-all(9px, 0, 0, 0);
+        height: 93%;
+      }
+      #myCanvas{
+        @include border-radius-right(9px);
+      }
+      .bottom-bar{
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        vertical-align: middle;
+        height: 7%;
+
+
+        button{
+          @extend %button-accent;
+          &:last-child {
+            display: block;
+            margin: auto;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+}
