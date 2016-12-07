@@ -6,17 +6,17 @@ body{
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
-    max-width: $content-width ;
-    height: 85vh;
+    width: 1003px;
+    height: 400px;
     margin: 20px auto;
     border: 2px solid $divider-color;
     @include border-radius(9px);
     .editor-cont{
       width: $content-width/2;
       #editor {
-        width: $content-width/2;
+        width: 600px;
         @include border-radius-all(9px, 0, 0, 0);
-        height: 93%;
+        height: 89%;
       }
       #myCanvas{
         @include border-radius-right(9px);
@@ -27,16 +27,19 @@ body{
         -webkit-align-items: center;
         align-items: center;
         vertical-align: middle;
-        height: 7%;
+        height: 11%;
 
 
         button{
           @extend %button-accent;
-          &:last-child {
-            display: block;
+          &:first-child {
+            display: inline;
             margin: auto;
             margin-right: 12px;
           }
+        }
+        .button-light{
+          @extend %button-accent-light;
         }
       }
     }

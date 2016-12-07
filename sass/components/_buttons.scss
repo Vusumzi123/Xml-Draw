@@ -42,3 +42,13 @@ button%button-accent {
     background-color: darken( $accent-color, 10% );
   }
 }
+
+button%button-accent-light {
+  @extend %button;
+  color: $accent-color;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  &:hover {
+    background-color: darken( $accent-color, 10% );
+  }
+}

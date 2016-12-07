@@ -23,6 +23,19 @@ function setVars(){
   hook.parentElement.insertBefore(script, hook);
 };*/
 
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
 var setCanvas = function(vars){
   var canvas = document.createElement('canvas');
   canvas.setAttribute('id', 'myCanvas');
@@ -40,8 +53,8 @@ var setCanvas = function(vars){
 var resizeCanvas = function(vars){
   var view = vars.view;
   var canvas = vars.canvas
-  var width = (view.offsetWidth/2)-3;
-  var height = view.offsetHeight-4;
+  var width = 400;
+  var height = 400;
 
   vars.canvas.setAttribute('width', width);
   vars.canvas.setAttribute('height', height);

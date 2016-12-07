@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   min-width: 900px; }
 
-header .button-cont button.button-dark, header .button-cont button.button-dark-2, body .view .editor-cont .bottom-bar button, body .view .editor-cont .bottom-bar button.button-light {
+header .button-cont button.button-dark, header .button-cont button.button-dark-2, body .view .editor-cont .bottom-bar button {
   border: 1px solid #fff;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
@@ -47,13 +47,6 @@ body .view .editor-cont .bottom-bar button {
   body .view .editor-cont .bottom-bar button:hover {
     background-color: #cc7a00; }
 
-body .view .editor-cont .bottom-bar button.button-light {
-  color: #ff9800;
-  background-color: transparent;
-  border: 1px solid #ff9800; }
-  body .view .editor-cont .bottom-bar button.button-light:hover {
-    background-color: #cc7a00; }
-
 header {
   background-color: #009688;
   color: #fff;
@@ -85,7 +78,7 @@ body {
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
-    width: 1003px;
+    max-width: 90vw;
     height: 400px;
     margin: 20px auto;
     border: 2px solid #bdbdbd;
@@ -96,12 +89,12 @@ body {
     body .view .editor-cont {
       width: 45vw; }
       body .view .editor-cont #editor {
-        width: 600px;
+        width: 45vw;
         border-radius: 9px 0 0 0;
         -moz-border-radius: 9px 0 0 0;
         -ms-border-radius: 9px 0 0 0;
         -webkit-border-radius: 9px 0 0 0;
-        height: 89%; }
+        height: 93%; }
       body .view .editor-cont #myCanvas {
         border-radius: 0px 9px 9px 0px;
         -moz-border-radius: 0px 9px 9px 0px;
@@ -113,10 +106,10 @@ body {
         -webkit-align-items: center;
         align-items: center;
         vertical-align: middle;
-        height: 11%; }
-        body .view .editor-cont .bottom-bar button:first-child {
-          display: inline;
+        height: 7%; }
+        body .view .editor-cont .bottom-bar button:last-child {
+          display: block;
           margin: auto;
           margin-right: 12px; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=cssmain.css.map */

@@ -10,6 +10,7 @@ function main(vars, can){
 
 
   var parseDraw = function(){
+
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(getXML(), "text/xml");
     var nodes = xmlDoc.getElementsByTagName('draws')[0].childNodes;
@@ -42,9 +43,16 @@ function main(vars, can){
     return code;
   };
 
+var down = function(){
+  console.log("hola");
+  download("code.xml",editor.getValue());
+};
 
   var rn =   document.getElementsByName('run')[0];
   rn.addEventListener('click', parseDraw);
+
+  var run= document.getElementsByName('down')[0];
+  run.addEventListener('click', down);
 
 
   window.addEventListener("resize", parseDraw);
