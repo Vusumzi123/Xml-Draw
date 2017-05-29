@@ -44,16 +44,23 @@ function main(vars, can){
   };
 
 var down = function(){
-  console.log("hola");
-  download("code.xml",editor.getValue());
+  //download("code.xml",editor.getValue());
+  //downloadCanvas(vars.canvas,"code.png");
+  downloadZip(editor.getValue(),vars.canvas);
 };
+
+var addRect = function() {
+    console.log("holi");
+    var code = editor.getValue()+"\n<rect\n\tx=\"100\"\n\ty=\"130\"\n\twidth=\"200\"\n\theight=\"130\"\n\tbackground-color=\"#009688\"/>";
+    editor.setValue(code);
+    console.log("holi");
+}
 
   var rn =   document.getElementsByName('run')[0];
   rn.addEventListener('click', parseDraw);
 
   var run= document.getElementsByName('down')[0];
   run.addEventListener('click', down);
-
 
   window.addEventListener("resize", parseDraw);
 

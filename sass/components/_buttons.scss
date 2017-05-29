@@ -1,7 +1,7 @@
 %button {
   border: 1px solid $text-color;
   @include border-radius(9px);
-  padding: 10px;
+  padding: 8px 10px;
   width: 100px;
   cursor: pointer;
   &:focus{
@@ -51,4 +51,16 @@ button%button-accent-light {
   &:hover {
     background-color: darken( $accent-color, 10% );
   }
+}
+
+.button-accent{
+  @extend %button-accent;
+  &:first-child {
+    display: inline;
+    margin: auto;
+    margin-right: 12px;
+  }
+}
+.button-accent-light{
+  @extend %button-accent-light;
 }

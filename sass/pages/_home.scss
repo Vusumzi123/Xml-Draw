@@ -1,12 +1,21 @@
 
 body{
+  color: lighten($primary-text-color, 30%);
   min-width: 900px;
+  .prog-title{
+    text-align: center;
+    width: 100%;
+    margin-top: 95px;
+
+
+  }
   .view {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
     width: 1003px;
+    min-width: 1003px;
     height: 400px;
     margin: 20px auto;
     border: 2px solid $divider-color;
@@ -20,15 +29,17 @@ body{
       }
       #myCanvas{
         @include border-radius-right(9px);
+        position: relative;
       }
       .bottom-bar{
         display: -webkit-flex;
         display: flex;
         -webkit-align-items: center;
         align-items: center;
+        width: 600px;
         vertical-align: middle;
         height: 11%;
-
+        border-top: 1px solid $divider-color;
 
         button{
           @extend %button-accent;

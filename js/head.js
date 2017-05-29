@@ -27,13 +27,35 @@ function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
-
   element.style.display = 'none';
   document.body.appendChild(element);
-
   element.click();
-
   document.body.removeChild(element);
+}
+
+function downloadCanvas(canvas, filename) {
+    var element = document.createElement('a');
+    element.href = canvas.toDataURL();
+    //element.download = filename;
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
+function downloadZip(text,canvas){
+  var zip = new JSZip();
+  var img = new Image();
+  img.src = canvas.toDataURL();
+
+  zip.file("code.xml", "<?xml version='1.0' encoding='UTF-8'?>\n"+text);
+
+  zip.file("code.png", img.src.substr(img.src.indexOf(',')+1), {base64: true});
+
+  zip.generateAsync({type:"blob"}).then(function(content) {
+      // see FileSaver.js
+      saveAs(content, "code.zip");
+});
 }
 
 var setCanvas = function(vars){
